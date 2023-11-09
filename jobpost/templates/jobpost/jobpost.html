@@ -1,0 +1,92 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Posting Jobs{% endblock title  %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'jobpost/css/style.css' %}">{% endblock css %}
+{% block form %}
+<br>
+<br>
+<br>
+<h1 class="form-quote">Let's hire your next great candidate. <em>Fast.</em></h1>
+<form method="post" class="job-form">
+
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="form-group">
+            <!-- {{ form.jobtitle.label_tag }} -->
+            <div class="custom-select">
+                {{ form.jobtitle }}
+            </div>
+           
+        </div>
+        <div class="form-group">
+            <!-- {{ form.joblocation.label_tag }} -->
+            {{ form.joblocation }}
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <!-- {{ form.companyname.label_tag }} -->
+            {{ form.companyname }}
+        </div>
+        <div class="form-group">
+            <!-- {{ form.jobtype.label_tag }} -->
+            {{ form.jobtype }}
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <!-- {{ form.industry.label_tag }} -->
+            {{ form.industry }}
+        </div>
+        <div class="form-group">
+            <!-- {{ form.skills.label_tag }} -->
+            {{ form.skills }}
+        </div>
+    </div>
+
+    <div class="form-group description-group">
+        <!-- {{ form.description.label_tag }} -->
+        {{ form.description }}
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <!-- {{ form.qualification.label_tag }} -->
+            {{ form.qualification }}
+        </div>
+        <div class="form-group">
+            <!-- {{ form.experience.label_tag }} -->
+            {{ form.experience }}
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <!-- {{ form.salary.label_tag }} -->
+            {{ form.salary }}
+        </div>
+        <div class="form-group">
+            <!-- {{ form.url.label_tag }} -->
+            {{ form.url }}
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <!-- {{ form.email.label_tag }} -->
+            {{ form.email }}
+        </div>
+        <div class="form-group">
+            <!-- {{ form.linkedin.label_tag }} -->
+            {{ form.linkedin }}
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock form %}
+{% block main-image %}{% endblock main-image %}
+{% block category %}{% endblock category %}
+{% block first-about %}{% endblock first-about %}

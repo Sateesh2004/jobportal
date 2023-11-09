@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Inter:wght@300;400;700&display=swap');
+.form-quote{
+   text-align: center;
+   font-family: 'inter';
+
+}
+.job-form {
+    max-width: 60vw;
+    margin:50px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #d6d8db;
+    border-radius: 8px;
+   
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex-basis: 48%;
+}
+
+.description-group {
+    width: 100%;
+}
+
+.form-group label {
+    font-weight: bold;
+    /* border:2px solid red; */
+}
+
+.form-group input, .form-group textarea,select {
+    width: calc(100% - 10px);
+    padding: 15px;
+    font-family: 'inter';
+    font-weight: 400;
+    color:#666565;
+    margin-top:10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    resize:none;
+    outline: none;
+    border: 1px solid #ced4da;
+    border-radius:2px;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+}
+.custom-select {
+    position: relative;
+}
+
+.custom-select select {
+    appearance: none;
+   
+}
+
+.custom-select::after {
+    content: '\f107'; /* Unicode for Font Awesome down arrow icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+
+    position: absolute;
+    top: 60%;
+    right: 40px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+.form-group input:focus, .form-group textarea:focus,select:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0, 176, 97, 0.25);
+    border-color:rgba(0, 176, 97, 0.25);
+
+    
+}
+
+button[type="submit"] {
+    padding: 15px 20px;
+    font-size: 16px;
+    background-color: #00B061;
+    
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    width: 99.4%;
+}
+
+

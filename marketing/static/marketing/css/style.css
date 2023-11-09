@@ -1,0 +1,119 @@
+
+
+.jobdetail{
+    background-color: #fff;
+    height:130px;
+    width:80vw;
+    margin:40px auto;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition:all 1s ease 0s;
+    overflow-x: auto;
+}
+
+.jobdetail h1{
+    margin-left:20px;
+    margin-top:5px;
+    font-family: 'inter';
+    
+}
+.jobdetail i{
+   color:#00B074;
+   margin-right:20px;
+    
+}
+.jobdetail span{
+    margin-left:20px;
+    font-family: 'heebo';
+    font-weight: 700;
+    color:#666565;
+
+}
+.jobdetail span i{
+    margin-right:5px;
+    color:#00B074
+}
+.jobdetail .btn-container{
+    display: flex;
+    gap:20px;
+    /* border:2px solid red; */
+    position: absolute;
+    top:0px;
+    right:0px;
+    margin-right:20px;
+    transform: translateY(40px);
+    
+    
+}
+
+button:hover{
+    cursor: pointer;
+}
+table{
+    display:none;
+}
+.jobdetail .btn-container button{
+    height:50px;
+    width:130px;
+    text-align: center;
+    border:none;
+    background-color: #00B074;
+    border-radius: 2px;
+    color:#fff;
+    font-family: 'inter';
+    font-weight: 800;
+    font-size: 17px;
+    transition: all 1s ease 0s;
+
+}
+.jobdetail .btn-container button:nth-child(2)
+{
+    background-color: #2b9bff;
+}
+.jobdetail .btn-container button:nth-child(3)
+{transition: all 1s ease-in-out 0s;
+    display: none;
+
+}
+.jobdetail .btn-container button i
+{color:#fff;
+    margin:0;
+    position: relative;
+    top:2.5px;
+    left:2px;
+
+}
+.jobdetail .btn-container .btnhide i
+{
+   position: relative;
+   top:0.5px;
+   /* border:2px solid red; */
+
+}
+/* styles.css */
+
+
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    transition: all 0.5s ease os;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

@@ -1,0 +1,86 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Marketing Job{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'marketing/css/style.css' %}">
+{% endblock css %}
+
+{% block joblist %}
+{% for job in marketing_jobs %}
+            
+            <div class="jobdetail">
+                <br>
+                <h1> <i class="fa-solid fa-envelopes-bulk"></i>{{ job.companyname }}</h1>
+                <br>
+                <span><i class="fa-solid fa-location-dot"></i>{{ job.joblocation }}</span>
+
+                <span><i class="fa-regular fa-clock"></i>{{ job.jobtype }}</span>
+                <span><i class="fa-regular fa-money-bill-1"></i>{{ job.salary }}</span>
+                <table>
+                  <thead>
+                      <tr>
+                          <th>Job Title</th>
+                          <th>Job Location</th>
+                          <th>Company Name</th>
+                          <th>Job Type</th>
+                          <th>Industry</th>
+                          <th>Skills</th>
+                          <th>Description</th>
+                          <th>Qualification</th>
+                          <th>Experience</th>
+                          <th>Salary</th>
+                          <th>URL</th>
+                          <th>Email</th>
+                          <th>LinkedIn</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      {% comment %} {% for job in marketing_jobs %} {% endcomment %}
+                          <tr>
+                              <td>{{ job.jobtitle }}</td>
+                              <td>{{ job.joblocation }}</td>
+                              <td>{{ job.companyname }}</td>
+                              <td>{{ job.jobtype }}</td>
+                              <td>{{ job.industry }}</td>
+                              <td>{{ job.skills }}</td>
+                              <td>{{ job.description }}</td>
+                              <td>{{ job.qualification }}</td>
+                              <td>{{ job.experience }}</td>
+                              <td>{{ job.salary }}</td>
+                              <td>{{ job.url }}</td>
+                              <td>{{ job.email }}</td>
+                              <td>{{ job.linkedin }}</td>
+                          </tr>
+                      {% comment %} {% endfor %} {% endcomment %}
+                  </tbody>
+              </table>
+                
+                <div class="btn-container">
+                    <button class="readmore">Read More<i class="fa-solid fa-angle-down"></i></button>
+                    <button><a href="/applyforjob/apply/" style="text-decoration:none; color:#fff">Apply Now</a></button>
+                    <button class="btnhide">Hide Details<i class="fa-solid fa-angle-up"></i></button>
+                </div>
+                
+
+            </div>
+
+{% endfor %}
+{% endblock joblist %}
+{% block main-image %}
+ 
+{% endblock main-image %}
+
+
+{% block category %}
+ 
+{% endblock category %}
+
+{% block first-about %}
+ 
+{% endblock first-about %}
+{% block script %}
+<script src="{% static 'marketing/script/script.js' %}"></script>
+{% endblock script %}
+</body>
+
+</html>
