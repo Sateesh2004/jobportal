@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Sign In</title>
+ <link rel="stylesheet" href="{% static 'enroll/css/signin.css' %}">
+</head>
+<body>
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        <h6>Sign in</h6>
+
+        {{ form.username }}
+        {% if form.username.errors %}
+            {% for error in form.username.errors %}
+                <p class="error">{{ error }}</p>
+            {% endfor %}
+        {% endif %}
+
+        <br>
+
+        {{ form.password }}
+        {% if form.password.errors %}
+            {% for error in form.password.errors %}
+                <p class="error">{{ error }}</p>
+            {% endfor %}
+        {% endif %}
+
+        <br>
+        {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+            <p class="error">{{ error }}</p>
+        {% endfor %}
+    {% endif %}
+        <input type="submit" value="Sign in">
+
+       
+        <span>Dont't have an account? <a href="/">Create account</a></span>
+    </form>
+    <script>
+        let username=document.getElementById("id_username")
+        username.placeholder="USERNAME"
+        let password=document.getElementById("id_password")
+        password.placeholder="PASSWORD"
+    </script>
+</body>
+</html>

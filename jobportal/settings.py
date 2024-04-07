@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'marketing',
     'categoryjob',
     'apply',
+    'enroll',
 ]
 
 MIDDLEWARE = [

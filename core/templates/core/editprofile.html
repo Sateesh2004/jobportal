@@ -1,0 +1,75 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+{% block title %}Edit Profile{% endblock title  %}
+  {% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'core/css/editprofile.css' %}">
+  {% endblock css %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+
+  {% block joblist %}{% endblock joblist %}
+  {% block form %}
+  <br>
+  <br>
+  {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+  <div class="profile-block">
+  <form method="POST" action="" novalidate>
+<br>
+    {% csrf_token %}
+    <center>
+        <h1>Edit Profile</h1></center>
+    <br>
+    <br>
+    {{ form.username }} {{ form.username.errors }}
+
+    <br />
+    <br />
+
+    {{ form.first_name }} {{ form.first_name.errors }}
+    <br />
+    <br />
+
+    {{ form.last_name }} {{ form.last_name.errors }}
+    <br />
+    <br />
+
+    {{ form.email }} {{ form.email.errors }}
+    <br />
+
+    
+    <input type="submit" value="SAVE" />
+    <br>
+    <br>
+  </form>
+  
+
+</div>
+  {% endblock form %}
+  {% block profile %}
+  {% endblock profile %}
+  
+  {% block main-image %}
+  
+  {% endblock main-image %}
+
+
+  {% block category %}
+  {% endblock category %}
+  
+      
+  
+  {% block first-about %}
+  {% endblock first-about %}
+  
+       
+  {% block script %}
+  {% endblock script %}
+
+  

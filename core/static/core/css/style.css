@@ -3,7 +3,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    
+    font-family: 'inter',sans-serif;
  }
  
  ::-webkit-scrollbar {
@@ -27,7 +27,7 @@
   }
 body{
         overflow-x: hidden;
-        
+       
         background-color:azure;
         
         
@@ -41,7 +41,7 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #ffffff;
+        background-color: azure;
         box-shadow: 0 0 45px rgba(0, 0, 0, .08);
 
     }
@@ -57,7 +57,7 @@ body{
     }
     nav a{
         text-decoration: none;
-        margin:10px;
+        margin:20px;
         color:black;
         font-size: 15px;
         font-family: 'Heebo', sans-serif;
@@ -70,6 +70,10 @@ body{
         color:white;
         /* font-weight: bold; */
         font-family: 'inter', sans-serif;
+    }
+    nav a i{
+        /* border:2px solid red; */
+        padding-left:10px;
     }
     
     #main-image{

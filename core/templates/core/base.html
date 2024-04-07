@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %}Document{% endblock title %}</title>
+  <title>{% block title %}Home{% endblock title %}</title>
   <link rel="stylesheet" type="text/css" href="{% static 'core/css/style.css' %}">
+  <link rel="icon" type="image/png" href="{% static 'core/images/job.svg' %}">
   {% block css %}{% endblock css %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
@@ -14,18 +15,21 @@
   <nav>
     <h1 class="logo">Talent-X</h1>
     <div>
-      <a href="/">HOME</a>
-      <a href="">ABOUT</a>
-      <a href="/jobshow/show/">JOBS</a>
-      <a href="">SCHOLARSHIP</a>
-      <a href="">CONTACT</a>
-      <a href="/jobpost/post/">Post A Job&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+      <a href="/home">Home<i class="fa-solid fa-house"></i></a>
+      <a href="">About<i class="fa-solid fa-address-card"></i></a>
+      <a href="/jobshow/show">Job<i class="fa-solid fa-briefcase"></i></a>
+      <a href="">Contact<i class="fa-solid fa-address-book"></i></a>
+      <a href="/profile">Profile<i class="fa-solid fa-gear"></i></a>
+      <a href="/jobpost/post">Post A Job&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </nav>
+
 
   {% block joblist %}{% endblock joblist %}
   {% block form %}
   {% endblock form %}
+  {% block profile %}
+  {% endblock profile %}
   
   {% block main-image %}
   <div id="main-image">

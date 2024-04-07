@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<title>{% block title %}Profile{% endblock title %}</title>
+  {% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'core/css/profile.css' %}">
+{% endblock css %}
+{% block joblist %}{% endblock joblist %}
+{% block form %}
+{% endblock form %}
+{% block profile %}
+<div class="profile-block">
+<br>
+<div class="profile-pic-container">
+  <h1 class="profile">Profile</h1>
+  <br>
+  <div class="dp">{{dp}}</div>
+</div>
+<br>
+<div class="detail-container">
+  <span>Username:</span>
+  <span>{{user_name}}</span>
+</div>
+<br>
+<div class="detail-container">
+  <span>First Name:</span>
+  <span>{{first_name}}</span>
+</div>
+<br>
+<div class="detail-container">
+  <span>Last Name:</span>
+  <span>{{last_name}}</span>
+</div>
+<br>
+<div class="detail-container">
+  <span>Email:</span>
+  <span>{{email}}</span>
+</div>
+<br>
+<a class="edit" href="/edit-profile">Edit Profile</a>
+<br>
+<br>
+<a class="log" href="/log-out">Logout</a>
+</div>
+{% endblock profile %}
+  {% block main-image %}
+  {% endblock main-image %}
+
+  {% block category %}
+  {% endblock category %}
+  {% block first-about %}
+  {% endblock first-about %}

@@ -16,18 +16,25 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from core import views
+from enroll import views as eviews
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
+    path('', eviews.sign_up),
+    path('sign-in/', eviews.sign_in),
+    path('home/', views.home),
     path('about/', views.about),
+    path('profile/', views.profile),
+    path('edit-profile/', views.editprofile),
     path('jobpost/', include("jobpost.urls")),
     path('jobshow/', include("joblist.urls")),
     path('marketjobshow/', include("marketing.urls")),
     path('categoryjobshow/', include("categoryjob.urls")),
     path('applyforjob/', include("apply.urls")),
+    path('log-out/', eviews.log_out),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

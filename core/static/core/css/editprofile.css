@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+font-family: 'Readex Pro', sans-serif;
+/* color:white; */
+}
+html{
+    font-size: 16px;
+}
+:root{
+    --pink-clr-:#00B074;
+    --navy-clr-:azure;
+}
+body{
+    background-color: var(--navy-clr-);
+    height:100vh;
+    width:100vw;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+::placeholder {
+    color: white; /* Set the color you want */
+  }
+form{
+    background-color: var(--pink-clr-);
+    margin:auto;
+    width: 399px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+h6{
+    /* border:2px solid red; */
+    width:40%;
+    text-align: center;
+    font-size: 1.2rem;
+    margin:auto;
+    margin-top:40px;
+    margin-bottom:30px;
+}
+input{
+    background-color: var(--pink-clr-);
+    margin:0px 50px;
+    margin-bottom:10px;
+    display: block;
+    padding:10px 10px;
+    
+    width:299px;
+    color:white;
+    outline:none;
+    border:none;
+    border-bottom: 2px solid var(--navy-clr-);
+}
+input[type="submit"]{
+    display: block;
+    margin:10px auto;
+    background-color: var(--navy-clr-);
+    margin-top:30px;
+    margin-bottom:30px;
+    color:var(--pink-clr-);
+}
+p{
+    font-size: 0.6rem;
+    /* border:2px solid red; */
+    text-align: center;
+}
+span{
+font-size: 0.8rem;
+margin-right:10px;
+display: block;
+text-align: center;
+margin-bottom:30px;
+}
+a{
+    text-decoration: none;
+    color:var(--navy-clr-)
+}
+ul{
+    list-style: none;
+    margin:0px 50px;
+    font-size: 0.7rem;
+}

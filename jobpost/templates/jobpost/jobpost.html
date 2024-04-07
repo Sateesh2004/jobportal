@@ -6,6 +6,16 @@
 <br>
 <br>
 <br>
+<div style="margin-left:100px;">
+    {% if messages %}
+<div class="messages">
+    {% for message in messages %}
+        <div{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+</div>
+
 <h1 class="form-quote">Let's hire your next great candidate. <em>Fast.</em></h1>
 <form method="post" class="job-form">
 
