@@ -6,23 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}Home{% endblock title %}</title>
   <link rel="stylesheet" type="text/css" href="{% static 'core/css/style.css' %}">
-  <link rel="icon" type="image/png" href="{% static 'core/images/job.svg' %}">
+  <link rel="icon" type="image/svg" href="{% static 'core/images/job.svg' %}">
   {% block css %}{% endblock css %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
 <body>
   <nav>
-    <h1 class="logo">Talent-X</h1>
-    <div>
-      <a href="/home">Home<i class="fa-solid fa-house"></i></a>
-      <a href="">About<i class="fa-solid fa-address-card"></i></a>
-      <a href="/jobshow/show">Job<i class="fa-solid fa-briefcase"></i></a>
-      <a href="">Contact<i class="fa-solid fa-address-book"></i></a>
-      <a href="/profile">Profile<i class="fa-solid fa-gear"></i></a>
-      <a href="/jobpost/post">Post A Job&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+    <div class="logo-container">
+      <img src="{% static 'core/images/job.svg' %}" alt="Logo">
+      <h1 class="logo">Talent-X</h1>
     </div>
-  </nav>
+    <div class="menu-container">
+      <a href="/home"><i class="fa-solid fa-house"></i>Home</a>
+      <a href=""><i class="fa-solid fa-address-card"></i>About</a>
+      <a href="/jobshow/show"><i class="fa-solid fa-briefcase"></i>Job</a>
+      <a href=""><i class="fa-solid fa-address-book"></i>Contact</a>
+      <a href="/profile"><i class="fa-solid fa-gear"></i>Profile</a>
+      <a href="/jobpost/post">Post A Job&nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+      <a href="javascript:void(0)" ><i class="fa-solid fa-close"></i></a>
+    </div>
+    <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+    </nav>
 
 
   {% block joblist %}{% endblock joblist %}
@@ -33,12 +38,15 @@
   
   {% block main-image %}
   <div id="main-image">
-    <img src="{% static 'core/images/job-5382501_1920.jpg' %}" alt="" id="image1" />
+    <!-- <img src="{% static 'core/images/job-5382501_1920.jpg' %}" alt="" id="image1" /> -->
     <div id="transparent">
       <div class="bracket">
         <div>
         <h1>Find The Perfect Job That You Deserved</h1>
-        <!-- <br> -->
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="btn-container">
           <button>Search A Job</button>
           <button>Find A Talent</button>
@@ -115,7 +123,7 @@
   {% endblock category %}
 
   {% block first-about %}
-  <div class="img-and-first-about-container">
+  {% comment %} <div class="img-and-first-about-container">
     <div class="main-image-container">
       <div class="container1">
         <img src="{% static 'core/images/about-1.jpg' %}" alt="" />
@@ -147,7 +155,7 @@
       <br />
       <button>Read More</button>
     </div>
-  </div>
+  </div> {% endcomment %}
   {% endblock first-about %}
   <footer>
     <div class="footer-container">
@@ -188,6 +196,16 @@
   </footer>
   {% block script %}
   {% endblock script %}
+  <script>
+    document.getElementsByClassName("hamburger")[0].addEventListener("click",comming)
+    document.getElementsByClassName("fa-close")[0].addEventListener("click",going)
+    function comming(){
+      document.getElementsByClassName("menu-container")[0].style.right="0px"
+    }
+    function going(){
+      document.getElementsByClassName("menu-container")[0].style.right="-170px"
+    }
+  </script>
 </body>
 
 </html>
