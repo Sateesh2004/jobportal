@@ -1,9 +1,28 @@
 from django.shortcuts import render,HttpResponseRedirect
 from django.contrib import messages
 from .forms import EditUserProfileForm
+from jobpost.models import Job
 # Create your views here.
 def home(request):
-    return render(request,"core/index.html")
+    marketing_jobs_count = Job.objects.filter(jobtitle='Marketing').count()
+    customer_jobs_count = Job.objects.filter(jobtitle='Customer Service').count()
+    human_jobs_count = Job.objects.filter(jobtitle='Human Resource').count()
+    management_jobs_count = Job.objects.filter(jobtitle='Project Management').count()
+    design_jobs_count = Job.objects.filter(jobtitle='Design & Creative').count()
+    teaching_jobs_count = Job.objects.filter(jobtitle='Teaching & Education').count()
+    sales_jobs_count = Job.objects.filter(jobtitle='Sales & Communication').count()
+    development_jobs_count = Job.objects.filter(jobtitle='Business Development').count()
+
+    return render(request, "core/index.html", {
+        'marketing_jobs_count': marketing_jobs_count,
+        'customer_jobs_count': customer_jobs_count,
+        'human_jobs_count': human_jobs_count,
+        'management_jobs_count': management_jobs_count,
+        'design_jobs_count': design_jobs_count,
+        'teaching_jobs_count': teaching_jobs_count,
+        'sales_jobs_count': sales_jobs_count,
+        'development_jobs_count': development_jobs_count
+    })
 def about(request):
     return render(request,"core/about.html")
 def profile(request):

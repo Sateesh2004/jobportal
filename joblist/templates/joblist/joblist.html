@@ -3,6 +3,71 @@
 {% load static %}
 {% block title %}Jobs{% endblock title %}
 {% block joblist %}
+<br>
+<br>
+<br>
+<br>
 {% endblock joblist %}
 {% block main-image %}{% endblock main-image %}
+{% block category %}
+  <h3>Explore By Category</h3>
+  <div class="category-container">
+    <a href="/marketjobshow/show" style="text-decoration:none; color:black">
+      <div class="job-categories">
+        <i class="fa-solid fa-envelopes-bulk"></i>
+        <p>Marketing</p>
+        <p class="vacancy-number">{{ marketing_jobs_count }} Vacancy</p>
+      </div>
+    </a>
+    <a href="/categoryjobshow/customer_job_show/" style="text-decoration:none; color:black">
+      <div class="job-categories">
+        <i class="fa-solid fa-headset"></i>
+        <p>Customer Service</p>  
+        <p class="vacancy-number">{{ customer_jobs_count }} Vacancy</p>
+      </div>
+    </a>
+    <a href="/categoryjobshow/human_job_show/" style="text-decoration:none; color:black">
+      <div class="job-categories">
+        <i class="fa-solid fa-user-tie"></i>
+        <p>Human Resource</p>
+        <p class="vacancy-number">{{ human_jobs_count }} Vacancy</p>
+      </div>
+    </a>
+    <a href="/categoryjobshow/management_job_show/" style="text-decoration:none; color:black">
+      <div class="job-categories">
+        <i class="fa-solid fa-list-check"></i>
+        <p>Project Management</p>
+        <p class="vacancy-number">{{ management_jobs_count }} Vacancy</p>
+      </div>
+    </a>
+    <a href="/categoryjobshow/development_job_show/" style="text-decoration:none; color:black">
+      <div class="job-categories">
+        <i class="fa-solid fa-chart-line"></i>
+        <p>Business Development</p>
+        <p class="vacancy-number">{{ development_jobs_count }} Vacancy</p>
+      </div>
+    </a>
+    <a href="/categoryjobshow/sales_job_show/" style="text-decoration:none; color:black">
+      <div class="job-categories">
+        <i class="fa-solid fa-handshake-angle"></i>
+        <p>Sales & Communication</p>
+        <p class="vacancy-number">{{ sales_jobs_count }} Vacancy</p>
+      </div>
+    </a>
+    <a href="/categoryjobshow/teaching_job_show/" style="text-decoration:none; color:black">
+      <div class="job-categories">
+        <i class="fa-solid fa-book-open-reader"></i>
+        <p>Teaching & Education</p>
+        <p class="vacancy-number">{{ teaching_jobs_count }} Vacancy</p>
+      </div>
+    </a>
+    <a href="/categoryjobshow/design_job_show/" style="text-decoration:none; color:black">
+      <div class="job-categories">
+        <i class="fa-solid fa-compass-drafting"></i>
+        <p>Design & Creative</p>
+        <p class="vacancy-number">{{ design_jobs_count }} Vacancy</p>
+      </div>
+    </a>
+  </div>
+{% endblock category %}
 {% block first-about %}{% endblock first-about %}
